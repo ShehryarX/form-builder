@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Form Builder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="assets/css/lib/bootstrap-3.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link id="bootstrap-classic-theme" href="" rel="stylesheet">
+    <link href="assets/css/custom.css?v=2" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+  <body>
+    <div id="loadQuery" class="modal">
+      <div class="modal-content">
+        <center>
+          <p><b>Please select to load or create a project name.</b></p>
+        <input type="text" id="loadJSONText" list="loadJSONOptions" />
+        <datalist id="loadJSONOptions">
+          <option>New Form</option>
+        </datalist>
+        <button id="loadJSONOptionConfirm" class='btn btn-info'>Select</button>
+      </center>
+      </div>
+    </div>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">DFE Now Form Builder</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="clearfix">
+            <h2>Rendered Form</h2>
+            <button id="saveJSONButton" class='btn btn-info'>Save JSON</button>
+            <button id="loadJSONButton" class='btn btn-info'>Load JSON</button>
+            <hr>
+            <div id="build">
+              <form id="target" class="form-horizontal">
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h2>Snippets</h2>
+          <a href="#" id="toggle_bs_style" class="btn btn-info btn-xs pull-right">Toggle Bootstrap 3.0 Theme</a>
+          <div class="clearfix"></div>
+          <hr>
+          <div class="tabbable">
+            <ul class="nav nav-tabs" id="formtabs">
+            </ul>
+            <form id="components" class="form-horizontal">
+              <fieldset>
+                <div class="tab-content">
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <center>
+              <p><b>Please select or create a tab to extend the snippet in.</b></p>
+            <input type="text" id="extendFinder" list="extendOptions" />
+            
+            <datalist id="extendOptions">
+
+            </datalist>
+            <button id="extendOptionsConfirm" class='btn btn-info'>Select</button>
+          </center>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script data-main="/assets/js/main-built.js" src="/assets/js/lib/require.js?v=3" ></script>
+  </body>
+</html>
